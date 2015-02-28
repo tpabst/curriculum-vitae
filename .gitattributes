@@ -1,0 +1,5 @@
+*.pdf diff=pdf
+*.doc diff=word
+*.odt diff=odt
+*.png diff=exif
+*.c   filter=indent

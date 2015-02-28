@@ -1,0 +1,14 @@
+# use glob syntax.
+syntax: glob
+*.orig
+*.swp
+*.bak
+*~
+*.aux
+*.log
+*.out
+
+
+# switch to regexp syntax.
+# syntax: regexp
+# ^\.pc/

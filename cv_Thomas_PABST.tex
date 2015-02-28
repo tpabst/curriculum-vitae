@@ -1,0 +1,113 @@
+% CV - Thomas PABST
+% 15 janvier 2013
+
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[french,a4paper,11pt]{curve}
+
+\usepackage[a4paper,nohead,nofoot,%hmargin=2.5cm,
+left=2.5cm,right=2cm,vmargin=1.333cm]{geometry}
+
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black,%
+pdftitle={CV Thomas Pabst},pdfauthor={Thomas Pabst},pdfsubject={Curriculum Vitae}]{hyperref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                 %
+%             EN-TETE             %
+%                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\leftheader{{\textbf{Thomas PABST}}\\
+Français, Pacsé, né le 5 août 1984 (28 ans),\\[1mm]
+34, Boulevard de la République\\
+92370 Chaville\\[1mm]
+E-mail : \href{mailto:thomas.pabst@gmail.com}{thomas.pabst@gmail.com}\\[1mm]
+Tél. (mobile) : 06 09 07 74 19\\
+Mobilité~: Paris, proche banlieue
+%Tél. (domicile) : 01 23 45 67 89
+}
+\rightheader{~%\\[\baselineskip] % saute une ligne
+%Célibataire
+%Nationalité : français
+}
+
+%\setlength\photosep{5mm} %laisser de l'espace à côté de la photo
+
+\titlefont{\fontfamily{pag}\selectfont\bfseries\huge}
+\title{
+	   %Développeur langage C~/~C++ \\
+	   Développeur C/C++, Qt, Linux \\}
+%\subtitle{Jeune diplômé}
+
+%\subtitlefont{\fontfamily{pzc}\selectfont\itshape\huge}
+%\input{subtitle}
+
+\photo[r]{photo_11_mars.png} %photo à droite
+\photowidth{3.0cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                 %
+%          PARAMETRES             %
+%                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\rubricfont{\fontfamily{pag}\selectfont\bfseries\Large}
+\subrubricfont{\fontfamily{pag}\selectfont\bfseries\itshape\large}
+\keyfont{\fontfamily{pag}\selectfont\bfseries}
+
+%\setlength\rubricspace{4cm} % espace rubrique, par défaut 10pt
+
+\subrubricalignment{l} % titres de sous-rubriques complètement à gauche
+
+%\usepackage{pifont} %donne accès à \ding
+\prefix{%\ding{226}} %flèche vers la droite
+--~~} % élément à mettre devant les items
+
+\continuedname{~~(suite)}
+
+\setlength\subrubricspace{3pt}
+
+\usepackage{color}
+\makeatletter
+% TITRE DE RUBRIQUE SEMI-SOULIGNE :
+\def\@@rubrichead#1{%
+  \@rubricfont%
+  \makebox[0pt][l]{\colorbox[gray]{0.8}{\makebox[\@almosttextwidth-\hfuzz]{\ }}}%
+  \makebox[\@almosttextwidth-\hfuzz][c]{#1}\par\vspace\rubricspace}
+
+% TITRE DE SOUS-RUBRIQUE AVEC LE CARRE :
+\def\@@subrubric#1{\raisebox{\@beforespace}{\@subrubricfont%
+    \makebox[1ex][l]{\colorbox[gray]{0.8}{\textcolor[gray]{0.8}{M}}}#1}%
+  \@subrubricmark{#1}%
+  \par\vspace\subrubricspace}
+\makeatother
+
+\headerscale{.7} % pourcentage de la largeur laissée à la partie gauche de l'entête
+
+\makeatletter
+% définition de la colonne des clés pour qu'elle prenne une largeur fixe
+\newcolumntype{k}{>{\@keyfont\raggedright}p{2.3cm}@{}} 
+\makeatother
+\begin{document}
+
+\makeheaders[c]
+\maketitle 
+
+\makerubric{cv_experience}
+\makerubric{cv_formation}
+\makerubric{cv_competences}
+\makerubric{cv_langues}
+\makerubric{cv_publications}
+\makerubric{cv_experience_pompier}
+\makerubric{cv_divers}
+
+\end{document}
+
+%% cv.tex ends here.
